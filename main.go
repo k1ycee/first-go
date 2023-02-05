@@ -58,6 +58,15 @@ func promptOptions(b Bill) {
 }
 
 func main() {
-	myBill := createBill()
-	promptOptions(myBill)
+	shapes := []shape{
+		square{length: 15.2},
+		circle{radius: 15.2},
+		circle{radius: 10},
+		square{length: 10},
+	}
+
+	for _, v := range shapes {
+		printShapeInfo(v)
+		fmt.Println("----")
+	}
 }
